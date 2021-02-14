@@ -1,25 +1,31 @@
 import logo from './logo.svg';
 import './App.css';
-
+// import Nav from './comp/navBar/nav'
+// import SignUp from './comp/Auth/signUp'
+import {BrowserRouter as Router,Route} from   "react-router-dom";
+import SignUp from "./comp/Auth/signUp"
+import LogIn from "./comp/Auth/logIn"
+import Nav from "./comp/navBar/nav"
 function App() {
   return (
-    <div></div>
-    // <div className="App">
-    //   <header className="App-header">
-    //     <img src={logo} className="App-logo" alt="logo" />
-    //     <p>
-    //       Edit <code>src/App.js</code> and save to reload.
-    //     </p>
-    //     <a
-    //       className="App-link"
-    //       href="https://reactjs.org"
-    //       target="_blank"
-    //       rel="noopener noreferrer"
-    //     >
-    //       Learn React
-    //     </a>
-    //   </header>
-    // </div>
+    <div>
+
+
+
+<Router>
+ 
+ <div>
+<Route path ='/' exact  component ={Nav}></Route>
+<Route path ='/signUp' exact component ={SignUp}></Route>
+  <Route path ='/login' exact component ={LogIn}></Route>
+ </div>
+
+</Router>
+
+      {/* <Nav/>
+      <SignUp/> */}
+    </div>
+
   );
 }
 
